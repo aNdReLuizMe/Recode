@@ -1,7 +1,7 @@
+# NaLu ✈️
 
-
-<p align="center"># NaLu ✈️
-<img src="[(https://imgur.com/vy9s6Z1)]" alt="NaLu Viagens" title="NaLu">
+<p align="center">
+<img src="https://imgur.com/vy9s6Z1" alt="NaLu Viagens" title="NaLu">
 </p>
 
 ## 📖 Sobre
