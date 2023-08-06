@@ -44,4 +44,4 @@ O projeto está sob a licença MIT. Para saber mais, acesse o arquivo [LICENSE](
 
 ---
 
-**Desenvolvido com 💙 por [aNdReMe](https://www.linkedin.com/in/andreluizme/).**
+**Com 💙 bY [aNdReMe](https://www.linkedin.com/in/andreluizme/).**
