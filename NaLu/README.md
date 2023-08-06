@@ -1,4 +1,6 @@
-<p align="center"># [NaLu ✈️](https://imgur.com/vy9s6Z1)</p>
+<p align="center">
+  # [NaLu ✈️](https://imgur.com/vy9s6Z1)
+</p>
 
 ## 📖 Sobre
 
