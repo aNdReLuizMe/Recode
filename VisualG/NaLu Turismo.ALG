@@ -1,0 +1,479 @@
+Algoritmo "NaLu Turismo"
+
+procedimento cadastraUsuario
+var
+   nome, usuario, senha : caractere
+   i, tamSenha : inteiro
+
+inicio
+   escreval()
+   escreval("Cadastro no sistema")
+   escreva("Digite seu Nome: ")
+   leia(nome)
+   escreva("Digite seu Usuário: ")
+   leia(usuario)
+   escreva("Digite sua Senha: ")
+   leia(senha)
+
+   tamSenha := Compr(senha)
+   se tamSenha < 5 entao
+      repita
+         escreval("A senha deve ter no mínimo 5 caracteres.")
+         escreva("Digite sua Senha: ")
+         leia(senha)
+         tamSenha := Compr(senha)
+      ate tamSenha > 4
+   fimse
+   limpatela
+
+   usuario[1] := nome
+   usuario[2] := usuario
+   usuario[3] := senha
+
+   limpatela
+   timer 1300
+   escreva("..... ")
+   escreva("Usuário Cadastrado com Sucesso.")
+   timer 0
+   limpatela
+   entrar
+fimprocedimento
+
+procedimento cadastraClientes
+var
+   cod, nome, nascimento, cpf, endereco, cpfTeste : caractere
+   i, j, qtd, codInt : inteiro
+   encontrou : logico
+inicio
+
+   escreval("Cadastro de clientes")
+   escreval("Digite quantos Clientes deseja cadastrar: ")
+   leia(qtd)
+
+   para i de 1 ate qtd faca
+      escreva("Nome do Cliente: ")
+      leia(nome)
+      escreva("Data de nascimento: ")
+      leia(nascimento)
+      escreva("CPF: ")
+      leia(cpf)
+
+      para j de 1 ate qtd faca
+         se cpf = clientes[j,4] entao
+            encontrou := verdadeiro
+            cpfTeste := clientes[j,4]
+            escreval("CPF "+ cpf +" já cadastrado.")
+
+            se encontrou = verdadeiro entao
+               enquanto cpfTeste = cpf faca
+                  escreval("Digite o CPF ")
+                  leia(cpf)
+               fimenquanto
+            fimse
+
+         fimse
+      fimpara
+
+      escreva("Endereço do Cliente: ")
+      leia(endereco)
+
+      cod := Numpcarac(i)
+
+      clientes[i, 1] := cod
+      clientes[i, 2] := nome
+      clientes[i, 3] := nascimento
+      clientes[i, 4] := cpf
+      clientes[i, 5] := endereco
+      limpatela
+      timer 1300
+      escreva(".....")
+      escreva("Cliente cadastrado com sucesso.")
+      timer 0
+      limpatela
+   fimpara
+   menuCliente
+fimprocedimento
+
+procedimento pesquisaCliente
+var
+   clienteEncontrado : vetor[1..5] de caractere
+   cpf : caractere
+   i, opc : inteiro
+   achado : logico
+
+inicio
+   escreval("Pesquisar Cliente")
+   escreval("---------------------------")
+   escreval("Digite o CPF do Cliente: ")
+   leia(cpf)
+   para i de 1 ate 10 faca
+      se cpf = clientes[i, 4] entao
+         achado := verdadeiro
+         clienteEncontrado[1] := clientes[i, 1]
+         clienteEncontrado[2] := clientes[i, 2]
+         clienteEncontrado[3] := clientes[i, 3]
+         clienteEncontrado[4] := clientes[i, 4]
+         clienteEncontrado[5] := clientes[i, 5]
+         interrompa
+      senao
+         achado := falso
+      fimse
+   fimpara
+   se achado = falso entao
+      escreval("Cliente não cadastrado!")
+   senao
+
+      escreval("---------------------------")
+      timer 1000
+      escreval("Código: " + clienteEncontrado[1])
+      escreval("Nome: " + clienteEncontrado[2])
+      escreval("Data de nascimento: " + clienteEncontrado[3])
+      escreval("CPF: " + clienteEncontrado[4])
+      escreval("Endereço: " + clienteEncontrado[5])
+      escreval("---------------------------")
+      timer 0
+
+   fimse
+   escreval("Deseja fazer nova pesquisa?")
+   escreval("[1] Sim")
+   escreval("[2] Não")
+   escreva("Opção: ")
+   leia(opc)
+   escolha opc
+   caso 1
+      pesquisaCliente
+   caso 2
+      menuCliente
+   outrocaso
+      escreval("Opção inválida.")
+      menuCliente
+   fimescolha
+
+fimprocedimento
+
+procedimento listarClientes
+var
+   i, totalClientes : inteiro
+
+inicio
+   totalClientes := 0
+   para i de 1 ate 10 faca
+      se clientes[i, 2] <> "" entao
+         totalClientes := totalClientes + 1
+         escreval("---------------------------")
+         timer 500
+         escreval("----[ " + clientes[i,2] + " ]-----")
+         escreval("Código: " + clientes[i,1])
+         escreval("Nome: " + clientes[i,2])
+         escreval("Data de nascimento: " + clientes[i,3])
+         escreval("CPF: " + clientes[i,4])
+         escreval("Endereço: " + clientes[i,5])
+         escreval("---------------------------")
+         timer 0
+      fimse
+   fimpara
+
+   se totalClientes = 0 entao
+      escreval("Nenhum cliente cadastrado.")
+   fimse
+
+   escreval("Digite F9 para continuar.")
+   pausa
+   menuCliente
+fimprocedimento
+
+procedimento cadastraDestino
+var
+   cod, destino, cidade, estado, pais : caractere
+   i, qtd, codInt : inteiro
+inicio
+
+   escreval("Cadastro de Destinos")
+   escreval("Digite quantos Destinos deseja cadastrar: ")
+   leia(qtd)
+   i := 0
+   para i de 1 ate qtd faca
+      escreval("Destino: ")
+      leia(destino)
+      escreval("Cidade: ")
+      leia(cidade)
+      escreval("Estado: ")
+      leia(estado)
+      escreval("País: ")
+      leia(pais)
+
+      cod := Numpcarac(i)
+
+      destinos[i, 1] := cod
+      destinos[i, 2] := destino
+      destinos[i, 3] := cidade
+      destinos[i, 4] := estado
+      destinos[i, 5] := pais
+
+      limpatela
+      timer 1300
+      escreva("..... ")
+      escreva("Destino Cadastrado com Sucesso.")
+      timer 0
+      limpatela
+
+   fimpara
+   menuDestino
+fimprocedimento
+
+procedimento pesquisaDestino
+var
+   destinoEncontrado : vetor[1..5] de caractere
+   destino : caractere
+   i, opc : inteiro
+   achado : logico
+
+inicio
+   escreval("Pesquisar Destino")
+   escreval("---------------------------")
+   escreval("Digite o Destino: ")
+   leia(destino)
+   para i de 1 ate 10 faca
+      se destino = destinos[i, 2] entao
+         achado := verdadeiro
+         destinoEncontrado[1] := destinos[i, 1]
+         destinoEncontrado[2] := destinos[i, 2]
+         destinoEncontrado[3] := destinos[i, 3]
+         destinoEncontrado[4] := destinos[i, 4]
+         destinoEncontrado[5] := destinos[i, 5]
+         interrompa
+      senao
+         achado := falso
+      fimse
+   fimpara
+   se achado = falso entao
+      escreval("Destino não cadastrado!")
+   senao
+
+      escreval("---------------------------")
+      timer 1000
+      escreval("Código: " + destinoEncontrado[1])
+      escreval("Destino: " + destinoEncontrado[2])
+      escreval("Cidade: " + destinoEncontrado[3])
+      escreval("Estado: " + destinoEncontrado[4])
+      escreval("País: " + destinoEncontrado[5])
+      escreval("---------------------------")
+      timer 0
+
+   fimse
+   escreval("Deseja fazer uma nova pesquisa?")
+   escreval("[1] Sim")
+   escreval("[2] Não")
+   escreva("Opção: ")
+   leia(opc)
+   escolha opc
+   caso 1
+      pesquisaDestino
+   caso 2
+      menuDestino
+   outrocaso
+      escreval("Opção inválida.")
+      escreval("Digite uma opção válida.")
+      menuDestino
+   fimescolha
+
+fimprocedimento
+
+procedimento listarDestinos
+var
+   i, totalDestinos : inteiro
+
+inicio
+   totalDestinos := 0
+   para i de 1 ate 10 faca
+      se destinos[i, 2] <> "" entao
+         totalDestinos := totalDestinos + 1
+         escreval("---------------------------")
+         timer 500
+         escreval("----[ " + destinos[i,2] + " ]-----")
+         escreval("Código: " + destinos[i,1])
+         escreval("Destino: " + destinos[i,2])
+         escreval("Cidade: " + destinos[i,3])
+         escreval("Estado: " + destinos[i,4])
+         escreval("País: " + destinos[i,5])
+         escreval("---------------------------")
+         timer 0
+      fimse
+   fimpara
+
+   se totalDestinos = 0 entao
+      escreval("Nenhum destino cadastrado.")
+   fimse
+
+   escreval("Digite F9 para continuar.")
+   pausa
+   menuDestino
+fimprocedimento
+
+
+procedimento menuCliente
+var
+   opc : inteiro
+inicio
+   escreval("NaLu Turismo")
+   escreval("---------------------------")
+   escreval("[1] Cadastrar Cliente")
+   escreval("[2] Buscar Cliente")
+   escreval("[3] Listar Clientes")
+   escreval("[4] Voltar")
+   escreval("---------------------------")
+   escreva("Opção: ")
+   leia(opc)
+   limpatela
+   escolha opc
+   caso 1
+      cadastraClientes
+   caso 2
+      pesquisaCliente
+   caso 3
+      listarClientes
+   caso 4
+      menu
+   outrocaso
+      escreval("Opção inválida.")
+      menuCliente
+   fimescolha
+
+fimprocedimento
+
+procedimento menuDestino
+var
+   opc : inteiro
+inicio
+   escreval("NaLu Turismo")
+   escreval("---------------------------")
+   escreval("[1] Cadastrar Destino")
+   escreval("[2] Buscar Destino")
+   escreval("[3] Listar Destinos")
+   escreval("[4] Voltar")
+   escreval("---------------------------")
+   escreva("Opção: ")
+   leia(opc)
+   limpatela
+   escolha opc
+   caso 1
+      cadastraDestino
+   caso 2
+      pesquisaDestino
+   caso 3
+      listarDestinos
+   caso 4
+      menu
+   outrocaso
+      escreval("Opção inválida.")
+      menuDestino
+   fimescolha
+
+fimprocedimento
+
+procedimento menu
+var
+   opc : inteiro
+inicio
+
+   escreval("NaLu Turismo")
+   escreval("---------------------------")
+   escreval("[1] Clientes")
+   escreval("[2] Destinos")
+   escreval("[3] Cadastrar usuário")
+   escreval("[0] Sair")
+   escreval("---------------------------")
+   escreval("Usuário: " + usuario[1])
+   escreva("Opção: ")
+   leia(opc)
+   limpatela
+   escolha opc
+   caso 1
+      menuCliente
+   caso 2
+      menuDestino
+   caso 3
+      cadastraUsuario
+   caso 0
+      escreva(usuario[1] + "Saindo...")
+   outrocaso
+      escreval("Opção inválida")
+      menu
+   fimescolha
+
+
+fimprocedimento
+
+procedimento entrar
+var
+   usuario, senha : caractere
+   i : inteiro
+
+inicio
+   escreval("NaLu Turismo")
+   escreval("---------------------------")
+   escreval("Login")
+   escreva("Usuário: ")
+   leia(usuario)
+   escreva("Senha: ")
+   leia(senha)
+   limpatela
+   se usuario = usuario[2]  entao
+      se senha = usuario[3] entao
+         timer 1300
+         escreval("---------------------------")
+         escreva("Seja bem vindo(a) " + usuario[1] + ".")
+         timer 0
+         limpatela
+         menu
+      senao
+         escreval("Senha não cadastrada!")
+         entrar
+      fimse
+   senao
+      escreval("Usuário não cadastrado!")
+      entrar
+   fimse
+   limpatela
+fimprocedimento
+
+Var
+   clientes : vetor[1..10,1..5] de caractere
+   destinos : vetor[1..10,1..5] de caractere
+   usuario : vetor[1..3] de caractere
+   i, opc : inteiro
+
+Inicio
+   escreval("NaLu Turismo")
+   escreval()
+   escreval("---------------------------")
+   escreval("[1] Entrar")
+   escreval("[2] Cadastrar Usuário")
+   escreval("[0] Sair")
+   escreval("---------------------------")
+   escreva("Opção: ")
+   leia(opc)
+
+   escolha opc
+   caso 1
+      se usuario[1] = "" entao
+         escreval("Nenhum usuário cadastrado.")
+         timer 1300
+         escreval("Redirecionando para a área de cadastro.")
+         timer 1000
+         limpatela
+         timer 0
+         cadastraUsuario
+      senao
+         entrar
+      fimse
+
+   caso 2
+      cadastraUsuario
+   caso 0
+      escreva(usuario[1] + "Saindo...")
+   outrocaso
+      escreval("Opção inválida")
+      entrar
+   fimescolha
+Fimalgoritmo
