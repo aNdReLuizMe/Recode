@@ -71,6 +71,8 @@ body {
 
 #footer {
   background-color: #d259a1;
+  text-align: center;
+  position: static;
 }
 
 #dica {
