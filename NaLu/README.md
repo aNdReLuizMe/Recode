@@ -1,5 +1,5 @@
 <p align="center">
-  ## [NaLu ✈️](https://imgur.com/vy9s6Z1)
+  ## [![NaLu ✈️]](https://imgur.com/vy9s6Z1)
 </p>
 
 ## 📖 Sobre
