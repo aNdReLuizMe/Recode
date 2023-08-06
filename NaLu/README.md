@@ -1,7 +1,5 @@
-# NaLu ✈️
-
 <p align="center">
-<img src="https://imgur.com/vy9s6Z1" alt="NaLu Viagens" title="NaLu">
+  ## [![NaLu ✈️]](https://imgur.com/vy9s6Z1)
 </p>
 
 ## 📖 Sobre
@@ -22,7 +20,7 @@ O projeto **NaLu** foi desenvolvido como projeto de entrega final do módulo 2, 
 
 ## 🖥️ Demonstração
 
-## [![NaLu]](https://imgur.com/hZR2tHt) ("Clique para acessar o projeto")
+## [![NaLu]](https://imgur.com/hZR2tHt)
 
 ---
 
@@ -46,4 +44,4 @@ O projeto está sob a licença MIT. Para saber mais, acesse o arquivo [LICENSE](
 
 ---
 
-**Desenvolvido com 💙 por [aNdReMe](https://www.linkedin.com/in/andreluizme/).**
+**Com 💙 bY [aNdReMe](https://www.linkedin.com/in/andreluizme/).**
