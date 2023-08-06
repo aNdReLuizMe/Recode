@@ -1,5 +1,5 @@
 <p align="center">
-  # [NaLu ✈️](https://imgur.com/vy9s6Z1)
+  ## [NaLu ✈️](https://imgur.com/vy9s6Z1)
 </p>
 
 ## 📖 Sobre
@@ -20,7 +20,7 @@ O projeto **NaLu** foi desenvolvido como projeto de entrega final do módulo 2, 
 
 ## 🖥️ Demonstração
 
-## [![NaLu]](https://imgur.com/hZR2tHt) ("Clique para acessar o projeto")
+## [![NaLu]](https://imgur.com/hZR2tHt)
 
 ---
 
