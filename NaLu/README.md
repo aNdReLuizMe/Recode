@@ -1,4 +1,4 @@
-  ## [![NaLu ✈️]]
+  ## NaLu ✈️
 
 <p align="center">(https://imgur.com/vy9s6Z1)
 </p>
