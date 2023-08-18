@@ -1,4 +1,4 @@
->>Algoritmo "NaLu Turismo"
+Algoritmo "NaLu Turismo"
 
 procedimento cadastraUsuario
 var
