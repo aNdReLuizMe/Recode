@@ -1,4 +1,4 @@
-Algoritmo "NaLu Turismo"
+>>Algoritmo "NaLu Turismo"
 
 procedimento cadastraUsuario
 var
@@ -10,7 +10,7 @@ inicio
    escreval("Cadastro no sistema")
    escreva("Digite seu Nome: ")
    leia(nome)
-   escreva("Digite seu Usu·rio: ")
+   escreva("Digite seu Usu√°rio: ")
    leia(usuario)
    escreva("Digite sua Senha: ")
    leia(senha)
@@ -18,7 +18,7 @@ inicio
    tamSenha := Compr(senha)
    se tamSenha < 5 entao
       repita
-         escreval("A senha deve ter no mÌnimo 5 caracteres.")
+         escreval("A senha deve ter no m√≠nimo 5 caracteres.")
          escreva("Digite sua Senha: ")
          leia(senha)
          tamSenha := Compr(senha)
@@ -33,7 +33,7 @@ inicio
    limpatela
    timer 1300
    escreva("..... ")
-   escreva("Usu·rio Cadastrado com Sucesso.")
+   escreva("Usu√°rio Cadastrado com Sucesso.")
    timer 0
    limpatela
    entrar
@@ -62,7 +62,7 @@ inicio
          se cpf = clientes[j,4] entao
             encontrou := verdadeiro
             cpfTeste := clientes[j,4]
-            escreval("CPF "+ cpf +" j· cadastrado.")
+            escreval("CPF "+ cpf +" j√° cadastrado.")
 
             se encontrou = verdadeiro entao
                enquanto cpfTeste = cpf faca
@@ -74,7 +74,7 @@ inicio
          fimse
       fimpara
 
-      escreva("EndereÁo do Cliente: ")
+      escreva("Endere√ßo do Cliente: ")
       leia(endereco)
 
       cod := Numpcarac(i)
@@ -120,24 +120,24 @@ inicio
       fimse
    fimpara
    se achado = falso entao
-      escreval("Cliente n„o cadastrado!")
+      escreval("Cliente n√£o cadastrado!")
    senao
 
       escreval("---------------------------")
       timer 1000
-      escreval("CÛdigo: " + clienteEncontrado[1])
+      escreval("C√≥digo: " + clienteEncontrado[1])
       escreval("Nome: " + clienteEncontrado[2])
       escreval("Data de nascimento: " + clienteEncontrado[3])
       escreval("CPF: " + clienteEncontrado[4])
-      escreval("EndereÁo: " + clienteEncontrado[5])
+      escreval("Endere√ßo: " + clienteEncontrado[5])
       escreval("---------------------------")
       timer 0
 
    fimse
    escreval("Deseja fazer nova pesquisa?")
    escreval("[1] Sim")
-   escreval("[2] N„o")
-   escreva("OpÁ„o: ")
+   escreval("[2] N√£o")
+   escreva("Op√ß√£o: ")
    leia(opc)
    escolha opc
    caso 1
@@ -145,7 +145,7 @@ inicio
    caso 2
       menuCliente
    outrocaso
-      escreval("OpÁ„o inv·lida.")
+      escreval("Op√ß√£o inv√°lida.")
       menuCliente
    fimescolha
 
@@ -163,11 +163,11 @@ inicio
          escreval("---------------------------")
          timer 500
          escreval("----[ " + clientes[i,2] + " ]-----")
-         escreval("CÛdigo: " + clientes[i,1])
+         escreval("C√≥digo: " + clientes[i,1])
          escreval("Nome: " + clientes[i,2])
          escreval("Data de nascimento: " + clientes[i,3])
          escreval("CPF: " + clientes[i,4])
-         escreval("EndereÁo: " + clientes[i,5])
+         escreval("Endere√ßo: " + clientes[i,5])
          escreval("---------------------------")
          timer 0
       fimse
@@ -199,7 +199,7 @@ inicio
       leia(cidade)
       escreval("Estado: ")
       leia(estado)
-      escreval("PaÌs: ")
+      escreval("Pa√≠s: ")
       leia(pais)
 
       cod := Numpcarac(i)
@@ -247,24 +247,24 @@ inicio
       fimse
    fimpara
    se achado = falso entao
-      escreval("Destino n„o cadastrado!")
+      escreval("Destino n√£o cadastrado!")
    senao
 
       escreval("---------------------------")
       timer 1000
-      escreval("CÛdigo: " + destinoEncontrado[1])
+      escreval("C√≥digo: " + destinoEncontrado[1])
       escreval("Destino: " + destinoEncontrado[2])
       escreval("Cidade: " + destinoEncontrado[3])
       escreval("Estado: " + destinoEncontrado[4])
-      escreval("PaÌs: " + destinoEncontrado[5])
+      escreval("Pa√≠s: " + destinoEncontrado[5])
       escreval("---------------------------")
       timer 0
 
    fimse
    escreval("Deseja fazer uma nova pesquisa?")
    escreval("[1] Sim")
-   escreval("[2] N„o")
-   escreva("OpÁ„o: ")
+   escreval("[2] N√£o")
+   escreva("Op√ß√£o: ")
    leia(opc)
    escolha opc
    caso 1
@@ -272,8 +272,8 @@ inicio
    caso 2
       menuDestino
    outrocaso
-      escreval("OpÁ„o inv·lida.")
-      escreval("Digite uma opÁ„o v·lida.")
+      escreval("Op√ß√£o inv√°lida.")
+      escreval("Digite uma op√ß√£o v√°lida.")
       menuDestino
    fimescolha
 
@@ -291,11 +291,11 @@ inicio
          escreval("---------------------------")
          timer 500
          escreval("----[ " + destinos[i,2] + " ]-----")
-         escreval("CÛdigo: " + destinos[i,1])
+         escreval("C√≥digo: " + destinos[i,1])
          escreval("Destino: " + destinos[i,2])
          escreval("Cidade: " + destinos[i,3])
          escreval("Estado: " + destinos[i,4])
-         escreval("PaÌs: " + destinos[i,5])
+         escreval("Pa√≠s: " + destinos[i,5])
          escreval("---------------------------")
          timer 0
       fimse
@@ -322,7 +322,7 @@ inicio
    escreval("[3] Listar Clientes")
    escreval("[4] Voltar")
    escreval("---------------------------")
-   escreva("OpÁ„o: ")
+   escreva("Op√ß√£o: ")
    leia(opc)
    limpatela
    escolha opc
@@ -335,7 +335,7 @@ inicio
    caso 4
       menu
    outrocaso
-      escreval("OpÁ„o inv·lida.")
+      escreval("Op√ß√£o inv√°lida.")
       menuCliente
    fimescolha
 
@@ -352,7 +352,7 @@ inicio
    escreval("[3] Listar Destinos")
    escreval("[4] Voltar")
    escreval("---------------------------")
-   escreva("OpÁ„o: ")
+   escreva("Op√ß√£o: ")
    leia(opc)
    limpatela
    escolha opc
@@ -365,7 +365,7 @@ inicio
    caso 4
       menu
    outrocaso
-      escreval("OpÁ„o inv·lida.")
+      escreval("Op√ß√£o inv√°lida.")
       menuDestino
    fimescolha
 
@@ -380,11 +380,11 @@ inicio
    escreval("---------------------------")
    escreval("[1] Clientes")
    escreval("[2] Destinos")
-   escreval("[3] Cadastrar usu·rio")
+   escreval("[3] Cadastrar usu√°rio")
    escreval("[0] Sair")
    escreval("---------------------------")
-   escreval("Usu·rio: " + usuario[1])
-   escreva("OpÁ„o: ")
+   escreval("Usu√°rio: " + usuario[1])
+   escreva("Op√ß√£o: ")
    leia(opc)
    limpatela
    escolha opc
@@ -397,7 +397,7 @@ inicio
    caso 0
       escreva(usuario[1] + "Saindo...")
    outrocaso
-      escreval("OpÁ„o inv·lida")
+      escreval("Op√ß√£o inv√°lida")
       menu
    fimescolha
 
@@ -413,7 +413,7 @@ inicio
    escreval("NaLu Turismo")
    escreval("---------------------------")
    escreval("Login")
-   escreva("Usu·rio: ")
+   escreva("Usu√°rio: ")
    leia(usuario)
    escreva("Senha: ")
    leia(senha)
@@ -427,11 +427,11 @@ inicio
          limpatela
          menu
       senao
-         escreval("Senha n„o cadastrada!")
+         escreval("Senha n√£o cadastrada!")
          entrar
       fimse
    senao
-      escreval("Usu·rio n„o cadastrado!")
+      escreval("Usu√°rio n√£o cadastrado!")
       entrar
    fimse
    limpatela
@@ -448,18 +448,18 @@ Inicio
    escreval()
    escreval("---------------------------")
    escreval("[1] Entrar")
-   escreval("[2] Cadastrar Usu·rio")
+   escreval("[2] Cadastrar Usu√°rio")
    escreval("[0] Sair")
    escreval("---------------------------")
-   escreva("OpÁ„o: ")
+   escreva("Op√ß√£o: ")
    leia(opc)
 
    escolha opc
    caso 1
       se usuario[1] = "" entao
-         escreval("Nenhum usu·rio cadastrado.")
+         escreval("Nenhum usu√°rio cadastrado.")
          timer 1300
-         escreval("Redirecionando para a ·rea de cadastro.")
+         escreval("Redirecionando para a √°rea de cadastro.")
          timer 1000
          limpatela
          timer 0
@@ -473,7 +473,7 @@ Inicio
    caso 0
       escreva(usuario[1] + "Saindo...")
    outrocaso
-      escreval("OpÁ„o inv·lida")
+      escreval("Op√ß√£o inv√°lida")
       entrar
    fimescolha
 Fimalgoritmo
