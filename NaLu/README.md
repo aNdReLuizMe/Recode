@@ -3,7 +3,7 @@
 <p align="center">(https://imgur.com/vy9s6Z1)
 </p>
 
-## 📖 Sobre nós
+## 📖 Sobre nós. ##
 
 O projeto > **NaLu**  foi desenvolvido e projetado para entrega final do módulo 2, da RecodePro, e trata-se de uma página de agência de viagens, composta por páginas diferentes, que exploram diversos componentes do _framework_ **Bootstrap**, como **carrossel**, **navbar**, **botões**, **formulários** simples e complexos, **modal**, **lista acordeão**, **_badges_** e **tabelas**, além de tipografia, imagens, cores, _grid_ e responsividade. Além disso, utilizei o pré-processador **Sass**, para **otimizar** o CSS final do projeto, eliminando componentes que não foram utilizados e minificando o arquivo final.
 
